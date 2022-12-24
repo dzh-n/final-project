@@ -660,33 +660,42 @@
             Подпишитесь на новостную рассылку <br />
             с самыми интересными новостями и акциями
           </p>
-          <div class="mb-4 mt-6 w-96">
-            <label for="email" class="leading-7">Эл. почта</label>
-            <input
-              placeholder="Figur@mail.ru"
-              type="email"
-              Figur@mail.ru
-              id="email"
-              name="email"
-              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
-          </div>
-          <div class="mb-4 w-96">
-            <label for="full-name" class="leading-7 text-sm">Имя</label>
-            <input
-              placeholder="Введите имя"
-              type="text"
-              id="full-name"
-              name="full-name"
-              class="w-full mb-3 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            /><input type="checkbox" class="pt-5" /><label
-              class="ml-3 text-xs"
-              for=""
-              >Вы соглашаетесь на обработку ваших персональных данных</label
-            >
-            <button class="bg_btn btn px-10 py-4 w-50 text-white mt-5">
-              Подписаться
-            </button>
+          <div id="auth-form">
+            <form>
+              <div class="mb-4 mt-6 w-96">
+                <label for="email" class="leading-7">Эл. почта</label>
+                <input
+                  placeholder="Figur@mail.ru"
+                  type="email"
+                  Figur@mail.ru
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+              <div class="mb-4 w-96">
+                <label for="full-name" class="leading-7 text-sm">Имя</label>
+                <input
+                  placeholder="Введите имя"
+                  type="text"
+                  id="full-name"
+                  name="full-name"
+                  required
+                  class="w-full mb-3 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                /><input type="checkbox" class="pt-5" /><label
+                  class="ml-3 text-xs"
+                  for=""
+                  >Вы соглашаетесь на обработку ваших персональных данных</label
+                >
+                <button
+                  id="submit-btn"
+                  class="bg_btn btn px-10 py-4 w-50 text-white mt-5"
+                >
+                  Подписаться
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

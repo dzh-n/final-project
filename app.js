@@ -110,3 +110,20 @@ likeBtn.forEach((btn) => {
   //   img.src = "img/icons/like.svg";
   // });
 });
+
+const emailInput = document.querySelector("#email");
+const fullNameInput = document.querySelector("#full-name");
+const submitBtn = document.querySelector("#submit-btn");
+const authForm = document.querySelector("#auth-form");
+
+submitBtn.addEventListener("click", submit);
+
+function submit() {
+  if (emailInput.value && fullNameInput.value) {
+    authForm.innerHTML = "";
+    const successEl = document.createElement("p");
+    successEl.classList.add("text-2xl", "mt-4");
+    successEl.textContent = "Вы успешно подписались!";
+    authForm.appendChild(successEl);
+  }
+}
