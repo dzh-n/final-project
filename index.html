@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Jost&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-200">
+    <header class="header hidden lg:block text-white body-font bg-black">
+      <div
+        class="container max-w-6xl mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center"
+      >
+        <nav class="flex lg:w-2/5 flex-wrap text-base md:ml-auto">
+          <div class="flex flex-col ml-1">
+            <a class="mr-5 text-white flex hover:text-orange-300"
+              ><img src="img/icons/Call.svg" class="mr-2" alt="" /> +7 952 552
+              52 52</a
+            >
+            <div class="flex mt-1">
+              <a href="#" class="text-xs mr-2 hover:text-orange-300">Viber</a>
+              <a href="#" class="text-xs mr-2 hover:text-orange-300">
+                Whats App</a
+              >
+              <a href="#" class="text-xs hover:text-orange-300"> Telegram</a>
+            </div>
+          </div>
+          <a class="ml-8 hover:text-orange-300 flex"
+            ><img
+              class="img_email mr-2 mt-1"
+              src="img/icons/email.svg"
+              alt=""
+            />Mr.Driskell@mail.ru</a
+          >
+        </nav>
+        <a
+          class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0"
+        >
+          <img class="ml-10 pl-10" src="img/icons/logomr.svg" alt="" />
+          <path
+            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+          ></path>
+          <span class="ml-3 text-xl"></span>
+        </a>
+        <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+          37 280 ₽
+          <button type="button" class="inline-flex relative">
+            <img class="ml-2" src="img/icons/paket.svg" alt="" />
+
+            <div
+              class="inline-flex absolute -top-4 -right-3 justify-center items-center w-6 h-6 text-xs font-bold text-white bg-orange-300 border-2 border-white dark:border-gray-900"
+            >
+              17
+            </div>
+          </button>
+          <a href=""><img src="img/icons/heart.svg" class="mx-9" alt="" /></a>
+          <a href=""
+            ><img src="img/icons/chelovek.svg" class="mr-7" alt=""
+          /></a>
+        </div>
+        <img src="img/icons/liniya.svg" class="mt-2" alt="" />
+      </div>
+      <div class="max-w-6xl container mx-auto flex pr-10 flex-col items-center">
+        <nav
+          class="menu flex items-center text-base mb-10 place-content-between w-full"
+        >
+          <div class="flex space-x-6 items-center">
+            <div class="flex relative">
+              <button
+                id="catalog_btn"
+                class="flex title-font font-medium items-center text-white"
+              >
+                <span class="text-2xl">Каталог</span>
+                <img src="img/icons/Vector.svg" class="ml-3 pt-2" alt="" />
+              </button>
+              <div
+                id="catalog_list"
+                class="sub_menu_list bg-white top-8 hidden absolute top-9 block w-max"
+              >
+                <div class="flex items-center p-5 space-x-4">
+                  <button
+                    class="text-black hover:text-orange-300 active:text-orange-400"
+                    id="catalog-list-categories"
+                  >
+                    По категории
+                  </button>
+                  <button
+                    id="catalog-list-brands"
+                    class="text-black hover:text-orange-300 active:text-orange-400"
+                  >
+                    По брендам
+                  </button>
+                </div>
+                <hr />
+                <ul
+                  id="catalog_list_data"
+                  class="text-black p-5 grid grid-cols-2 max-w-6xl w-max gap-x-4 gap-y-2"
+                ></ul>
+              </div>
+            </div>
+
+            <input
+              type="text"
+              class="mx-9 bg-black border-2 border-orange-300/50 input_img"
+              placeholder="           Поиск"
+            />
+          </div>
+          <div class="flex cursor-pointer">
+            <a class="mr-6 hover:text-orange-300">Промокоды</a>
+            <a class="mr-6 hover:text-orange-300">Скидки</a>
+            <a class="mr-6 hover:text-orange-300">Помощь</a>
+            <a class="mr-6 hover:text-orange-300">О нас</a>
+            <a class="mr-6 hover:text-orange-300">Контакты</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <header class="header lg:hidden text-white body-font p-5 bg-black">
+      <div class="flex items-center justify-between">
+        <button
+          id="catalog_btn"
+          class="flex title-font font-medium items-center text-white"
+        >
+          <span class="text-2xl">Меню</span>
+          <img src="img/icons/Vector.svg" class="ml-3 pt-2" alt="" />
+        </button>
+        <input
+          type="text"
+          class="mx-9 bg-black border-2 border-orange-300/50 hidden md:block input_img"
+          placeholder="           Поиск"
+        />
+        <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+          37 280 ₽
+          <button type="button" class="inline-flex relative">
+            <img class="ml-2" src="img/icons/paket.svg" alt="" />
+
+            <div
+              class="inline-flex absolute -top-4 -right-3 justify-center items-center w-6 h-6 text-xs font-bold text-white bg-orange-300 border-2 border-white dark:border-gray-900"
+            >
+              17
+            </div>
+          </button>
+          <a class="hidden md:block" href=""
+            ><img src="img/icons/heart.svg" class="mx-9" alt=""
+          /></a>
+          <a class="hidden md:block" href=""
+            ><img src="img/icons/chelovek.svg" class="mr-7" alt=""
+          /></a>
+        </div>
+      </div>
+    </header>
+    <div class="bg_one pb-16 px-5">
+      <div class="container mx-auto max-w-6xl flex place-content-between">
+        <div class="w-full">
+          <div class="flex justify-center md:hidden w-full">
+            <img class="w-full" src="img/bg/Bg_mobail.png" alt="" />
+          </div>
+          <p class="text-7xl text-orange-300 pt-10 font_family text-orange-300">
+            Лучшие товары <br />
+            в мире татуировок
+          </p>
+          <p class="text-stone-200 mt-10 text-2xl">
+            Оборудование и расходники <br />
+            для самых ярких и качественных работ
+          </p>
+          <button class="bg_btn btn px-10 py-4 text-white mt-20">
+            Cмотреть каталог
+          </button>
+        </div>
+        <div class="hidden lg:flex">
+          <img src="img/icons/karusel.svg" alt="" />
+        </div>
+      </div>
+      <div class="justify-center mt-20 hidden md:flex lg:hidden">
+        <img src="img/icons/karusel_mobail.svg" alt="" />
+      </div>
+    </div>
+    <section class="container max-w-6xl mx-auto">
+      <div class="cursor-pointer">
+        <div class="flex justify-between mt-10 font-bold overflow-auto">
+          <a href="#" class="mr-3 hover:text-orange-500 whitespace-nowrap">
+            Хиты продаж</a
+          >
+          <a href="#" class="mr-3 hover:text-orange-500 whitespace-nowrap"
+            >Самые популярные</a
+          >
+          <a href="#" class="mr-3 hover:text-orange-500 whitespace-nowrap"
+            >Новые поступления</a
+          >
+          <a href="#" class="mr-3 hover:text-orange-500 whitespace-nowrap"
+            >Акционные товары</a
+          >
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 grid-rows-1 lg:grid-rows-2 overflow-hidden mt-5 gap-5"
+        >
+          <div class="bg-gray-100 pb-5 lg:hover:scale-110 group relative">
+            <img src="img/tattoo_machine/tattoo-icons.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">
+              Foxxx Kitsune Mini Black <br />
+              Vintage RCA
+            </p>
+            <p class="text-orange-600 p-5 font-bold">6 000 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+          <div
+            class="bg-gray-100 pb-5 lg:hover:scale-110 group relative hidden md:block"
+          >
+            <img src="img/tattoo_machine/tattoo-icons_two.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">
+              Foxxx Viper Fox Golden <br />
+              Vintage Lot #1 RCA
+            </p>
+            <p class="text-orange-600 p-5 font-bold">8 730 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+          <div
+            class="bg-gray-100 pb-5 lg:hover:scale-110 group relative hidden md:block"
+          >
+            <img src="img/tattoo_machine/tattoo-icons_three.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">
+              Нитровиниловые перчатки<br />
+              Wally Plastic S
+            </p>
+            <p class="text-orange-600 p-5 font-bold">20 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+          <div
+            class="bg-gray-100 pb-5 lg:hover:scale-110 group relative hidden lg:block"
+          >
+            <img src="img/tattoo_machine/tattoo-icons_four.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">
+              Forever Cartridge Grip Ergo <br />
+              30 mm Огненно-Рыжий
+            </p>
+            <p class="text-orange-600 p-5 font-bold">2 037 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+          <div
+            class="bg-gray-100 pb-5 lg:hover:scale-110 group relative hidden lg:block"
+          >
+            <img src="img/tattoo_machine/tattoo-icons_five.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">
+              Verge Direct 2.1 Pink gip EGO <br />
+              4 mm liners
+            </p>
+            <p class="text-orange-600 p-5 font-bold">2 037 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+          <div
+            class="bg-gray-100 pb-5 lg:hover:scale-110 group relative hidden lg:block"
+          >
+            <img src="img/tattoo_machine/tattoo-icons_six.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">
+              Deuce Machines Direct Drive <br />
+              #7 RCA Samurai
+            </p>
+            <p class="text-orange-600 p-5 font-bold">8 000 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+          <div
+            class="bg-gray-100 pb-5 lg:hover:scale-110 group relative hidden lg:block"
+          >
+            <img src="img/tattoo_machine/tattoo-icons_seven.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">
+              Cyborg Machines Alter Rotary <br />
+              Axis Cross Sexy Nymph
+            </p>
+            <p class="text-orange-600 p-5 font-bold">11 000 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+          <div
+            class="bg-gray-100 pb-5 lg:hover:scale-110 group relative hidden lg:block"
+          >
+            <img src="img/tattoo_machine/tattoo-icons_eight.png" alt="" />
+            <button class="like-btn absolute right-5 top-5">
+              <img src="img/icons/like.svg" alt="" />
+            </button>
+            <p class="p-5">Verge Direct 2.1 Gunmetal</p>
+            <p class="text-orange-600 p-5 font-bold">10 000 ₽</p>
+            <button
+              class="block lg:hidden group-hover:block text-orange-800 border-2 border-orange-800 px-5 py-3 mx-auto my-2"
+            >
+              Добавить в корзину
+            </button>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="lg:hidden mt-16">
+            <img src="img/icons/karusel_mobail.svg" alt="" />
+          </div>
+          <button
+            class="btn text-orange-800 border-2 border-orange-800 px-10 py-4 text-white mt-10 hidden lg:block"
+          >
+            Показать еще
+          </button>
+        </div>
+      </div>
+      <article class="mt-20">
+        <h1 class="text-6xl font_family text-center mb-8">Каталог</h1>
+        <div class="grid grid-cols-1 md:grid-cols-10 gap-5 mb-5">
+          <a
+            class="col-span-4 flex items-end pt-6 bg-gray-100 font-bold relative"
+          >
+            <p class="p-6 z-10 absolute top-3 left-3">Тату наборы</p>
+            <img
+              class="object-contain w-full"
+              src="img/catalog_img/tattoo_nabor.png"
+              alt=""
+            />
+          </a>
+          <a
+            class="col-span-6 flex items-end pt-6 bg-gray-50 font-bold relative"
+          >
+            <p class="p-6 z-10 absolute top-3 left-3">Держатели</p>
+            <img
+              class="object-contain w-full"
+              src="img/catalog_img/derzhateli.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-10 gap-5 mb-5">
+          <a
+            class="col-span-3 flex items-end pt-6 bg-gray-100 font-bold relative"
+          >
+            <p class="p-6 z-10 absolute top-3 left-3">Тату машинки</p>
+            <img
+              class="object-contain w-full"
+              src="img/catalog_img/tatoo_machine.png"
+              alt=""
+            />
+          </a>
+          <a
+            class="col-span-4 flex items-end pt-6 bg-gray-100 font-bold relative"
+          >
+            <p class="p-6 z-10 absolute top-3 left-3">Педали и провода</p>
+            <img
+              class="object-contain w-full"
+              src="img/catalog_img/pedali_provoda.png"
+              alt=""
+            />
+          </a>
+          <a
+            class="col-span-3 flex items-end pt-6 bg-gray-100 font-bold relative"
+          >
+            <p class="p-6 z-10 absolute top-3 left-3">Краски</p>
+            <img
+              class="object-contain w-full"
+              src="img/catalog_img/kraski.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="hidden lg:block">
+          <div class="grid grid-cols-1 md:grid-cols-10 gap-5 mb-5">
+            <a
+              class="col-span-4 flex items-end pt-6 bg-gray-100 font-bold relative"
+            >
+              <p class="p-6 z-10 absolute top-3 left-3">Блоки питания</p>
+              <img
+                class="object-contain w-full"
+                src="img/catalog_img/blokpitania.png"
+                alt=""
+              />
+            </a>
+            <a
+              class="col-span-3 flex items-end pt-6 bg-gray-100 font-bold relative"
+            >
+              <p class="p-6 z-10 absolute top-3 left-3">Наконечники</p>
+              <img
+                class="object-contain w-full"
+                src="img/catalog_img/nakonechniki.png"
+                alt=""
+              />
+            </a>
+            <a
+              class="col-span-3 flex items-end pt-6 bg-gray-100 font-bold relative"
+            >
+              <p class="p-6 z-10 absolute top-3 left-3">Тату иглы</p>
+              <img
+                class="object-contain w-full"
+                src="img/catalog_img/tattoo_igli.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-10 gap-5 mb-5">
+            <a
+              class="col-span-3 flex items-end pt-6 bg-gray-100 font-bold relative"
+            >
+              <p class="p-6 z-10 absolute top-3 left-3">
+                Защита, ёмкости, расходники
+              </p>
+              <img
+                class="object-contain w-full"
+                src="img/catalog_img/rashodniki.png"
+                alt=""
+              />
+            </a>
+            <a
+              class="col-span-3 flex items-end pt-6 bg-gray-100 font-bold relative"
+            >
+              <p class="p-6 z-10 absolute top-3 left-3">Аксессуары</p>
+              <img
+                class="object-contain w-full"
+                src="img/catalog_img/aksesuari.png"
+                alt=""
+              />
+            </a>
+            <a
+              class="col-span-4 flex items-end pt-6 bg-gray-100 font-bold relative"
+            >
+              <p class="p-6 z-10 absolute top-3 left-3">Принтеры и планшеты</p>
+              <img
+                class="object-contain w-full"
+                src="img/catalog_img/printeri_plansheti.png"
+                alt=""
+              />
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <div class="relative mt-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <img src="img/bg/kraski_lip_Nitn.png" alt="" />
+        <img src="img/bg/foxx_viper.png" alt="" />
+      </div>
+      <div
+        class="container mx-auto max-w-6xl absolute top-0 left-1/2 -translate-x-1/2 h-full"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-5 h-full">
+          <p class="top-5 text-white font-bold text-4xl">Краски Lip Nitn</p>
+          <p class="top-5 text-white font-bold text-4xl">
+            Foxx viper — <br />
+            хит 2021 года
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto max-w-6xl mt-20">
+      <div class="flex place-content-between">
+        <h1 class="font_family text-6xl">Популярные бренды</h1>
+        <p class="self-end text-2xl">Смотреть все</p>
+      </div>
+      <div class="grid grid-cols-3 lg:grid-cols-5 gap-3 mt-3 relative">
+        <div>
+          <a href=""><img src="img/brands/kuro_sumi.png" alt="" /></a>
+        </div>
+        <div>
+          <a href=""><img src="img/brands/hanafy.png" alt="" /></a>
+        </div>
+        <div>
+          <a href=""><img src="img/brands/tattoo_revive.png" alt="" /></a>
+        </div>
+        <div>
+          <a href=""><img src="img/brands/aloe_tattoo.png" alt="" /></a>
+        </div>
+        <div>
+          <a href=""><img src="img/brands/dermalize.png" alt="" /></a>
+        </div>
+        <div>
+          <a href=""><img src="img/brands/face_body.png" alt="" /></a>
+        </div>
+        <div class="hidden lg:block">
+          <a href=""><img src="img/brands/h2ocean.png" alt="" /></a>
+        </div>
+        <div class="hidden lg:block">
+          <a href=""><img src="img/brands/ink_machines.png" alt="" /></a>
+        </div>
+        <div class="hidden lg:block">
+          <a href=""><img src="img/brands/cheyenne.png" alt="" /></a>
+        </div>
+        <div class="hidden lg:block">
+          <a href=""><img src="img/brands/kwadron.png" alt="" /></a>
+        </div>
+        <button class="hidden lg:block">
+          <img
+            class="absolute top-1/3 -left-20 border-2 border-orange-900 p-5"
+            src="img/brands/strel_levo.svg"
+            alt=""
+          />
+        </button>
+        <button class="hidden lg:block">
+          <img
+            class="absolute top-1/3 -right-20 border-2 border-orange-900 p-5"
+            src="img/brands/strel_pravo.svg"
+            alt=""
+          />
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row mt-20">
+      <div class="w-full"><img src="img/bg/people.png" alt="" /></div>
+      <div class="container mx-auto ml-8 mt-4 max-w-6xl">
+        <h1 class="font_family text-orange-300 text-5xl mb-6">
+          Тату магазин Mr. Driskell
+        </h1>
+        <p class="mb-6">
+          Приветствуем вас в Tattoo Mall — в нашем тату магазине собираются<br />
+          энтузиасты индустрии, профессиональные мастера и новички, которые<br />
+          только делают первые шаги в тату искусстве. Мы знаем, насколько
+          важно<br />
+          грамотно и точно подобрать инструменты для продуктивных тату
+          сеансов,<br />
+          и помогаем быстро найти то, что поможет их сделать именно такими.<br />
+        </p>
+        <p>
+          В нашем ассортименте не просто тату оборудование, это буквально
+          целая<br />
+          команда из грамотных и действительно эффективных помощников
+          на вашем<br />
+          рабочем столе. Пройдя этап долгих разработок и бесчисленных тестов<br />
+          под пристальным взглядом отечественных машиностроителей,
+          космецевтов<br />
+          и брендов с мировым именем, эти товары нарабатывали опыт и каждый
+          день<br />
+          становились лучше, чтобы показать, на что они способны, и помочь<br />
+          раскрыть ваш потенциал.
+        </p>
+        <button
+          class="btn text-orange-800 border-2 border-orange-800 px-10 py-4 text-white mt-8"
+        >
+          О компании
+        </button>
+      </div>
+    </div>
+    <div class="container max-w-6xl mx-auto mt-20">
+      <h1 class="font_family text-6xl text-center">Отзывы</h1>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-20">
+        <div
+          class="bg-black border-2 border-orange-300 text-white p-10 relative"
+        >
+          <img class="absolute -top-14" src="img/photo/photo_one.png" alt="" />
+          <button class="hidden lg:block">
+            <img
+              class="absolute top-1/3 -left-20 border-2 border-orange-900 p-5"
+              src="img/brands/strel_levo.svg"
+              alt=""
+            />
+          </button>
+
+          <p>
+            Заказал первый раз, заказ пришёл вовремя, упаковано<br />
+            все отлично, все заказанное соответствует описанию, но есть<br />
+            один маленький ньюанс, коробки все мятые, то-ли при упаковке<br />
+            так случилось, то-ли на складе так отноcятся к товару, в целом<br />
+            всем доволен, буду заказывать ещё, сайт-магазин рекомендую<br />
+            к покупкам
+          </p>
+          <div class="flex mt-6">
+            <img
+              class="border-2 border-orange-300 p-1"
+              src="img/icons/inst.svg"
+              alt=""
+            />
+            <span class="font_family text-orange-300 text-xl ml-3"
+              >@Velli7350</span
+            >
+          </div>
+        </div>
+        <div
+          class="hidden lg:block bg-black border-2 border-orange-300 text-white p-10 relative"
+        >
+          <img class="absolute -top-14" src="img/photo/photo_two.png" alt="" />
+          <p>
+            Положили всё необходимое + наклейку, скидочную карту<br />
+            и леденцы, неожиданным было то, что держатель и клип-корд<br />
+            в наборе пришёл не того цвета, меня даже порадовало,<br />
+            вот только разочаровала одна упакованная игла, которую<br />
+            не получилось адекватно достать
+          </p>
+          <button class="hidden lg:block">
+            <img
+              class="absolute top-1/3 -right-20 border-2 border-orange-900 p-5"
+              src="img/brands/strel_pravo.svg"
+              alt=""
+            />
+          </button>
+          <div class="flex mt-10">
+            <img
+              class="border-2 border-orange-300 p-1"
+              src="img/icons/inst.svg"
+              alt=""
+            />
+            <span class="font_family text-orange-300 text-xl ml-3"
+              >@mark_love</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center py-6 lg:hidden">
+        <img src="img/icons/karusel_mobail.svg" alt="" />
+      </div>
+    </div>
+    <div class="flex mt-10">
+      <div class="container max-w-6xl mx-auto">
+        <div class="flex flex-col ml-5 md:ml-24">
+          <h2 class="font_family text-6xl mb-5">Узнавайте первыми</h2>
+          <p>
+            Подпишитесь на новостную рассылку <br />
+            с самыми интересными новостями и акциями
+          </p>
+          <div class="mb-4 mt-6 w-96">
+            <label for="email" class="leading-7">Эл. почта</label>
+            <input
+              placeholder="Figur@mail.ru"
+              type="email"
+              Figur@mail.ru
+              id="email"
+              name="email"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="mb-4 w-96">
+            <label for="full-name" class="leading-7 text-sm">Имя</label>
+            <input
+              placeholder="Введите имя"
+              type="text"
+              id="full-name"
+              name="full-name"
+              class="w-full mb-3 bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            /><input type="checkbox" class="pt-5" /><label
+              class="ml-3 text-xs"
+              for=""
+              >Вы соглашаетесь на обработку ваших персональных данных</label
+            >
+            <button class="bg_btn btn px-10 py-4 w-50 text-white mt-5">
+              Подписаться
+            </button>
+          </div>
+        </div>
+      </div>
+      <img class="w-1/2 hidden lg:block" src="img/bg/ruka.png" alt="" />
+    </div>
+    <footer class="bg-black">
+      <div class="container max-w-6xl mx-auto flex py-20 px-5">
+        <div class="grid grid-coils-1 lg:grid-cols-2 w-full">
+          <div class="flex flex-col md:flex-row">
+            <div>
+              <img class="mb-12" src="img/icons/logomr.svg" alt="" />
+              <a
+                class="text-white hover:text-orange-300 hidden md:block"
+                href=""
+              >
+                Политика конфиденциальности
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-6 text-white text-xl md:ml-14">
+              <a class="hover:text-orange-300" href="">Промокоды</a>
+              <a class="pl-8 hover:text-orange-300" href="">О нас</a>
+              <a class="hover:text-orange-300" href="">Скидки</a>
+              <a class="pl-8 hover:text-orange-300" href="">Контакты</a>
+              <a class="hover:text-orange-300" href="">Помощь</a>
+            </div>
+          </div>
+          <hr class="lg:hidden bg-orange-300 my-10" />
+          <div class="lg:border-l-2 border-orange-300 lg:pl-12">
+            <div
+              class="flex flex-col md:flex-row w-full space-y-4 md:space-x-4 md:items-center mb-6"
+            >
+              <a
+                class="mr-5 text-white flex items-center hover:text-orange-300 text-xl"
+              >
+                <img src="img/icons/Call.svg" class="w-6 mr-2" alt="" />
+                <p>8 800 600-61-91</p>
+              </a>
+              <div class="flex items-center space-x-4">
+                <a class="border-2 border-orange-300 p-2 h-fit" href=""
+                  ><img class="w-6 h-6" src="img/icons/telegram.svg" alt=""
+                /></a>
+                <a href="" class="border-2 border-orange-300 p-2 h-fit"
+                  ><img class="w-6 h-6" src="img/icons/viber.svg" alt=""
+                /></a>
+                <a href="" class="border-2 border-orange-300 p-2 h-fit"
+                  ><img class="w-6 h-6" src="img/icons/watsapp.svg" alt=""
+                /></a>
+              </div>
+            </div>
+            <p class="text-gray-400">Время работы: с 9:00 до 20:00 по мск</p>
+            <a class="mt-8 text-white hover:text-orange-300 flex"
+              ><img
+                class="img_email mr-2 mt-1"
+                src="img/icons/email.svg"
+                alt=""
+              />Mr.Driskell@mail.ru</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

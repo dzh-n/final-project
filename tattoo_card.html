@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Forum&family=Jost&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <body class="bg-gray-200">
+      <header class="header text-white body-font bg-black">
+        <div
+          class="container max-w-6xl mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center"
+        >
+          <nav class="flex lg:w-2/5 flex-wrap text-base md:ml-auto">
+            <div class="flex flex-col ml-1">
+              <a class="mr-5 text-white flex hover:text-orange-300"
+                ><img src="img/icons/Call.svg" class="mr-2" alt="" /> +7 952 552
+                52 52</a
+              >
+              <div class="flex mt-1">
+                <a href="#" class="text-xs mr-2 hover:text-orange-300">Viber</a>
+                <a href="#" class="text-xs mr-2 hover:text-orange-300">
+                  Whats App</a
+                >
+                <a href="#" class="text-xs hover:text-orange-300"> Telegram</a>
+              </div>
+            </div>
+            <a class="ml-8 hover:text-orange-300 flex"
+              ><img
+                class="img_email mr-2 mt-1"
+                src="img/icons/email.svg"
+                alt=""
+              />Mr.Driskell@mail.ru</a
+            >
+          </nav>
+          <a
+            class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0"
+          >
+            <img class="ml-10 pl-10" src="img/icons/logomr.svg" alt="" />
+            <path
+              d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+            ></path>
+            <span class="ml-3 text-xl"></span>
+          </a>
+          <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+            37 280 ₽
+            <button type="button" class="inline-flex relative">
+              <img class="ml-2" src="img/icons/paket.svg" alt="" />
+
+              <div
+                class="inline-flex absolute -top-4 -right-3 justify-center items-center w-6 h-6 text-xs font-bold text-white bg-orange-300 border-2 border-white dark:border-gray-900"
+              >
+                17
+              </div>
+            </button>
+            <a href=""><img src="img/icons/heart.svg" class="mx-9" alt="" /></a>
+            <a href=""
+              ><img src="img/icons/chelovek.svg" class="mr-7" alt=""
+            /></a>
+          </div>
+          <img src="img/icons/liniya.svg" class="mt-2" alt="" />
+        </div>
+        <div
+          class="max-w-6xl container mx-auto flex pr-10 flex-col items-center"
+        >
+          <nav
+            class="menu flex items-center text-base mb-10 place-content-between w-full"
+          >
+            <div class="flex space-x-6 items-center">
+              <div class="flex relative">
+                <button
+                  id="catalog_btn"
+                  class="flex title-font font-medium items-center text-white"
+                >
+                  <span class="text-2xl hover:text-orange-300">Каталог</span>
+                  <img src="img/icons/Vector.svg" class="ml-3 pt-2" alt="" />
+                </button>
+                <div
+                  id="catalog_list"
+                  class="sub_menu_list bg-white top-8 hidden absolute top-9 block w-max"
+                >
+                  <div class="flex items-center p-5 space-x-4">
+                    <button
+                      class="text-black hover:text-orange-300 active:text-orange-400"
+                      id="catalog-list-categories"
+                    >
+                      По категории
+                    </button>
+                    <button
+                      id="catalog-list-brands"
+                      class="text-black hover:text-orange-300 active:text-orange-400"
+                    >
+                      По брендам
+                    </button>
+                  </div>
+                  <hr />
+                  <ul
+                    id="catalog_list_data"
+                    class="text-black p-5 grid grid-cols-2 max-w-6xl w-max gap-x-4 gap-y-2"
+                  ></ul>
+                </div>
+              </div>
+
+              <input
+                type="text"
+                class="mx-9 bg-black border-2 border-orange-300/50 input_img"
+                placeholder="           Поиск"
+              />
+            </div>
+            <div class="flex cursor-pointer">
+              <a class="mr-6 hover:text-orange-300">Промокоды</a>
+              <a class="mr-6 hover:text-orange-300">Скидки</a>
+              <a class="mr-6 hover:text-orange-300">Помощь</a>
+              <a class="mr-6 hover:text-orange-300">О нас</a>
+              <a class="mr-6 hover:text-orange-300">Контакты</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section>
+        <div class="container max-w-6xl mx-auto mt-12">
+          <div class="flex text-gray-400">
+            <a href="">Главная</a>
+            <span class="mx-5">/</span>
+            <a href=""> Каталог </a>
+            <span class="mx-5">/</span>
+            <a href=""> Тату машинки </a>
+            <span class="mx-5">/</span>
+            <a class="text-gray-700" href="">
+              Foxxx Viper Fox Golden Vintage Lot #1 RCA
+            </a>
+          </div>
+          <div class="mt-8 flex">
+            <div>
+              <img
+                class="h-24 w-20 hover:border-2 border-orange-300"
+                src="img/tattoo_machine/tattoo-icons_two.png"
+                alt=""
+              />
+              <img
+                class="h-24 w-20 mt-3 hover:border-2 border-orange-300"
+                src="img/tattoo_machine/tattoo_back_view.png"
+                alt=""
+              />
+              <img
+                class="h-24 w-20 mt-3 hover:border-2 border-orange-300"
+                src="img/tattoo_machine/tattoo_front_view.png"
+                alt=""
+              />
+              <img
+                class="h-24 w-20 mt-3 hover:border-2 border-orange-300"
+                src="img/tattoo_machine/tattoo_right.png"
+                alt=""
+              />
+            </div>
+            <div class="ml-5 relative">
+              <img
+                class="w_img_tattoo_left"
+                src="img/tattoo_machine/tattoo-icons_two.png"
+                alt=""
+              />
+              <button class="like-btn absolute right-5 top-5">
+                <img src="img/icons/like.svg" alt="" />
+              </button>
+            </div>
+            <div class="ml-5">
+              <h1 class="text-3xl font-bold">
+                Foxxx Viper Fox Golden Vintage Lot #1 RCA
+              </h1>
+              <span class="text-orange-300 font-bold text-2xl">34 920 ₽</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script src="app.js"></script>
+    </body>
+  </body>
+</html>

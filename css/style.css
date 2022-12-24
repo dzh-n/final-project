@@ -1,0 +1,51 @@
+body {
+  font-family: "Jost", sans-serif;
+}
+
+.img_email {
+  width: 20.05px;
+  height: 16px;
+}
+
+.input_img {
+  background-image: url(../img/icons/lupa.svg);
+  background-repeat: no-repeat;
+  background-position: 20px;
+
+  padding: 4px;
+  width: 450px;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.bg_one {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .bg_one {
+    background-image: url(../img/bg/Bg_one.png);
+  }
+}
+
+.font_family {
+  font-family: "Forum", cursive;
+}
+
+.bg_btn {
+  background-color: #524336;
+  border: 2px solid #bb8c5f;
+}
+
+.w_img_tattoo_left {
+  height: 420px;
+}
