@@ -108,6 +108,38 @@ likeBtn.forEach((btn) => {
   });
 });
 
+const menu = [
+  "Каталог",
+  "Контакты",
+  "Промокоды",
+  "Скидки",
+  "Помощь",
+  "О нас",
+  "Избранное",
+  "Личный кабинет",
+];
+
+const menuBtn = document.querySelector("#menu_btn");
+const MenuList = document.querySelector("#menu-list");
+const menuListData = document.querySelector("#menu-list-data");
+
+menuBtn.addEventListener("click", toggleMenu);
+
+function renderMenu(arr) {
+  menuListData.innerHTML = "";
+  for (let i = 0; i < arr.length; i++) {
+    const element = document.createElement("li");
+    element.textContent = arr[i];
+    menuListData.appendChild(element);
+  }
+}
+
+renderMenu(menu);
+
+function toggleMenu() {
+  MenuList.classList.toggle("hidden");
+}
+
 const emailInput = document.querySelector("#email");
 const fullNameInput = document.querySelector("#full-name");
 const submitBtn = document.querySelector("#submit-btn");
@@ -124,3 +156,17 @@ function submit() {
     authForm.appendChild(successEl);
   }
 }
+
+// const inputCounter = document.querySelector("#input-counter");
+// const plus = document.querySelector("#plus");
+// const minus = document.querySelector("#minus");
+
+// plus.addEventListener("click", counter);
+// minus.addEventListener("click", counter);
+
+// function counter() {
+//  inputCounter.value++
+
+//   }
+
+//   function counter()
