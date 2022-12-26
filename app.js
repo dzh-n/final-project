@@ -106,9 +106,6 @@ likeBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     img.src = "img/icons/like-filled.svg";
   });
-  // btn.addEventListener("mouseleave", () => {
-  //   img.src = "img/icons/like.svg";
-  // });
 });
 
 const emailInput = document.querySelector("#email");
